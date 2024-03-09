@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.25rem;
+  font-family: "Sora", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafaf9;
+  color: #52525a;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  min-height: 100vh;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 120px 60px;
+  gap: 40px;
+}
+
+/** Left Side **/
+
+.rev_star {
+  width: 50px;
+  height: 50px;
+  background-color: #f5c044;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.rev_star img {
+  width: 60%;
+}
+
+.rev_tittle {
+  font-size: 2.25rem;
+  color: #18181b;
+  margin-bottom: 16px;
+}
+
+.rev_body {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  line-height: 35px;
+  text-wrap: wrap;
+  font-weight: 400;
+}
+
+.rev_list {
+  font-size: 0.875rem;
+  list-style: none;
+}
+
+.list_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/** Right Side **/
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.card {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 65%;
+  font-size: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.card_images {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_images img {
+  width: 30%;
+  margin-bottom: 10px;
+}
+
+.card_stars {
+  width: 100%;
+}
+
+.card_stars img {
+  width: 30px;
+}
+
+.card h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#google {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#meta {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/** Responsive desing **/
+
+@media screen and (max-width: 640px) {
+  .container {
+    padding: 130px 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .card_stars img {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .card {
+    width: 90%;
+  }
+}
